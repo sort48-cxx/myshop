@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <router-view></router-view>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+// 禁止手机端扩大和缩小手势
+window.onload = function () {
+  document.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+      event.preventDefault()
+    }
+  })
+  document.addEventListener('gesturestart', function (event) {
+    event.preventDefault()
+  })
+}
 
-@Component({
-  components: {
-    HelloWorld
-  }
-})
-export default class App extends Vue {}
 </script>
 
 <style lang="scss">
@@ -24,6 +26,10 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  // margin-top: 60px;
+}
+.my-bullet-active {
+  background: #ffb923 !important;
+  opacity: 1 !important;
 }
 </style>
