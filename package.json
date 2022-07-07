@@ -11,7 +11,7 @@
     "babel-plugin-import": "^1.13.0",
     "better-scroll": "^1.15.2",
     "core-js": "^3.4.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "pubsub-js": "^1.8.0",
     "reset-css": "^5.0.1",
     "svg-sprite-loader": "^4.1.6",
